@@ -1,0 +1,11 @@
+<div style="background-color: aqua;height :100px;">
+<p>this is a parent component</p>
+<input type="text" [(ngModel)]="instruction">
+<h4>{{replyFromChild}}</h4>
+</div>
+
+<app-childdd [getInstruction] ="instruction" 
+(childEvent) = "receiveData($event)"></app-childdd>
+
+
+

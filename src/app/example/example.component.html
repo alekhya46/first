@@ -1,0 +1,26 @@
+<h1>THE PARK</h1>
+<label for="">please enter your name</label>
+<input type="text" [(ngModel)]= "customername"><br><br>
+<label for="">please enter your age</label>
+<input type="number" [(ngModel)]="customerage"><br>
+<button class="btn btn-primary" (click)="detailsSubmission()">submit</button>
+<div *ngIf="details">
+    <h1 [ngStyle]="{'color':'blue'}">{{customername}} these are the aminities available </h1>
+    <ul>
+        <li>food</li> 
+        <li >gym</li>
+        <li *ngIf="swimmingpass()">swimming</li>
+        <li *ngIf="pubpass()">pub</li>
+    </ul>
+    </div>
+    <h1>these are the board members</h1>
+    <ul *ngFor ="let emp of empDetails; first as f; last as l">
+        <li> 
+            <h4>{{emp.empname}}</h4>
+            <p>{{emp.designation}}</p>
+            <p *ngIf="f">this is imp person</p>
+            <p *ngIf="l">this is last mem</p>
+        </li>
+
+    </ul>
+

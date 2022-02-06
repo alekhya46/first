@@ -1,0 +1,8 @@
+.success{
+    color: chartreuse;
+    background-color: coral;
+}
+.failure{
+    color: cyan;
+    background-color: darkgreen;
+}
